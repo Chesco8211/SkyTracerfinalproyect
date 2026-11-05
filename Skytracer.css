@@ -757,6 +757,61 @@ section.contact h2 {
   margin-left: auto;
   margin-right: auto;
 }
+/* ==========================================
+   CORRECCIÓN RESPONSIVA PARA CELULARES
+   ========================================== */
+
+@media (max-width: 900px) {
+  /* 1. Header flexible para que no se amontone en tablets y móviles */
+  .site-header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+
+  .site-header nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* 2. Sección Hero: Pasa de 2 columnas a 1 sola columna vertical */
+  .hero {
+    grid-template-columns: 1fr; /* Una sola columna fluida */
+    gap: 30px;
+    padding: 40px 20px;       /* Márgenes laterales seguros para celular */
+    margin: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.3rem;         /* Reduce el tamaño del título principal para que quepa bien */
+  }
+
+  /* 3. Ajustes generales de secciones para evitar cortes */
+  .section {
+    padding: 50px 20px;
+  }
+
+  .section-heading h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes extra para teléfonos muy pequeños (iPhone SE, Galaxy A series, etc.) */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .quick-booking {
+    padding: 20px 15px;        /* Tarjeta de reserva más compacta */
+  }
+
+  .booking-row {
+    grid-template-columns: 1fr; /* Inputs de fecha/vuelo en columna individual en móviles pequeños */
+    gap: 10px;
+  }
+}
 
 section.contact .gold-button {
   display: inline-block;
