@@ -351,7 +351,7 @@ body {
 
 /* Referencias a tus fotos originales de la flota */
 .aircraft-card .light-jet { 
-  background: url('fotos/Pilot-Report-Embraer-Praetor-600-1.jpg') center / cover no-repeat; 
+  background: url('Pilot-Report-Embraer-Praetor-600-1.jpg') center / cover no-repeat; 
 }
 
 .aircraft-card .midsize-jet { 
@@ -359,19 +359,19 @@ body {
 }
 
 .aircraft-card .heavy-jet { 
-  background: url('fotos/image.png') center / cover no-repeat; 
+  background: url('image.png') center / cover no-repeat; 
 }
 
 .aircraft-card .regional-jet { 
-  background: url('fotos/Gray-Dassault-Falcon-8X.jpg') center / cover no-repeat; 
+  background: url('Gray-Dassault-Falcon-8X.jpg') center / cover no-repeat; 
 }
 
 .aircraft-card .airliner { 
-  background: url('fotos/BombardierGlobal7500.png') center / cover no-repeat; 
+  background: url('BombardierGlobal7500.png') center / cover no-repeat; 
 }
 
 .aircraft-card .gulfstream-g800 { 
-  background: url('fotos/vg800.jpg') center / cover no-repeat; 
+  background: url('vg800.jpg') center / cover no-repeat; 
 }
 
 .aircraft-info {
