@@ -9,7 +9,7 @@
   margin: 20px auto;
   align-items: center;
   /* Tu imagen original del jet con la puerta abierta con un fondo claro y elegante */
-  background: url('fotos/herofoto.avif');
+  background: url('herofoto.avif');
   background-size: cover;
   background-position: center;
   border-radius: 12px;
