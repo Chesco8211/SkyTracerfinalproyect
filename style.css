@@ -98,10 +98,10 @@ body {
 }
 
 
-/* El canvas cubre TODO el contenedor del logo (invisible, solo es el escenario del avión) */
 .logo-interactive-container canvas {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
@@ -151,7 +151,7 @@ body {
   background-color: #fcfcfc;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 0.0)),
-    url('herofoto.avif');
+    url('fotos/herofoto.avif');
   background-size: cover;
   background-position: center;
   border-radius: 12px;
@@ -381,7 +381,7 @@ body {
 
 /* Referencias a tus fotos originales de la flota */
 .aircraft-card .light-jet { 
-  background: url('Pilot-Report-Embraer-Praetor-600-1.jpg') center / cover no-repeat; 
+  background: url('fotos/Pilot-Report-Embraer-Praetor-600-1.jpg') center / cover no-repeat; 
 }
 
 
@@ -391,22 +391,22 @@ body {
 
 
 .aircraft-card .heavy-jet { 
-  background: url('image.png') center / cover no-repeat; 
+  background: url('fotos/image.png') center / cover no-repeat; 
 }
 
 
 .aircraft-card .regional-jet { 
-  background: url('Gray-Dassault-Falcon-8X.jpg') center / cover no-repeat; 
+  background: url('fotos/Gray-Dassault-Falcon-8X.jpg') center / cover no-repeat; 
 }
 
 
 .aircraft-card .airliner { 
-  background: url('BombardierGlobal7500.png') center / cover no-repeat; 
+  background: url('fotos/BombardierGlobal7500.png') center / cover no-repeat; 
 }
 
 
 .aircraft-card .gulfstream-g800 { 
-  background: url('vg800.jpg') center / cover no-repeat; 
+  background: url('fotos/vg800.jpg') center / cover no-repeat; 
 }
 
 
