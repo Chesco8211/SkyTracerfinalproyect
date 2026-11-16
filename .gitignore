@@ -1,0 +1,15 @@
+
+# Dependencias instaladas por npm
+node_modules/
+
+# Archivos locales y temporales de Android
+android/local.properties
+.gradle/
+**/build/
+
+# Credenciales de firma y variables privadas
+*.jks
+*.keystore
+.env
+.env.*
+!.env.example

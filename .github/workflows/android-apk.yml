@@ -1,0 +1,65 @@
+name: Generar APK de Android
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "android/**"
+      - "www/**"
+      - "package.json"
+      - "package-lock.json"
+      - "capacitor.config.json"
+      - ".github/workflows/android-apk.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Descargar el proyecto
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Configurar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Configurar herramientas de Android
+        uses: android-actions/setup-android@v3
+
+      - name: Instalar Android SDK
+        run: sdkmanager "platforms;android-36" "build-tools;36.0.0"
+
+      - name: Instalar dependencias del proyecto
+        run: npm ci
+
+      - name: Sincronizar Capacitor con Android
+        run: npx cap sync android
+
+      - name: Permitir ejecutar Gradle
+        run: chmod +x android/gradlew
+
+      - name: Compilar APK de prueba
+        working-directory: android
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: Guardar APK para descargar
+        uses: actions/upload-artifact@v4
+        with:
+          name: SkyTracer-Android-debug
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 7
