@@ -37,12 +37,10 @@ jobs:
           distribution: temurin
           java-version: "21"
 
-      -       - name: Configurar herramientas de Android
+      - name: Configurar herramientas de Android
         uses: android-actions/setup-android@v3
         with:
           packages: "platform-tools"
-        with:
-          packages: platform-tools
 
       - name: Instalar Android SDK
         run: sdkmanager "platforms;android-36" "build-tools;36.0.0"
